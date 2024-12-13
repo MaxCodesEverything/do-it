@@ -1,0 +1,159 @@
+body {
+    position: relative;
+}
+
+.main-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+}
+
+.main-container__title {
+    margin-bottom: 1.8rem;
+    padding-top: 4rem;
+}
+
+.main-container__nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.main-container__search {
+    position: relative;
+    flex-grow: 1;
+    max-width: 59.5rem;
+}
+
+.main-container__search-input {
+    width: 94%;
+}
+
+.main-container__search-btn {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-container__search-btn:focus {
+    outline: none;
+}
+
+.main-section__filter-btn {
+    width: 8.5rem;
+    height: 3.8rem;
+    background-color: var(--color-blue);
+    border: none;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.main-section__filter-btn:focus {
+    outline: none;
+}
+
+
+.main-container__theme-btn {
+    background-color: var(--color-blue);
+    border: none;
+    cursor: pointer;
+    width: 3.8rem;
+    height: 3.8rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.main-container__theme-btn:focus {
+    outline: none;
+}
+
+.main-container__notes-box {
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.main-container__empty-box {
+    text-align: center;
+}
+
+.main-container__empty-box img {
+    width: 22.1rem;
+    height: 17.4rem;
+    margin-bottom: 2rem;
+}
+
+.main-container__empty-text {
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+    color: var(--color-black);
+}
+
+.main-section__add-btn {
+    position: absolute;
+    right: -140px;
+    top: 74vh;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 35px;
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    cursor: pointer;
+}
+
+.main-section__add-btn:focus {
+    outline: none;
+}
+
+.notes-container__note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 52rem;
+    padding: 1.7rem 0;
+    border-bottom: 1px solid var(--color-blue);
+}
+
+.notes-container__note:last-child {
+    border: none;
+}
+
+.notes-container__left-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.notes-container__checkbox {
+    margin-right: 1.7rem;
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.notes-container__text {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.note-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.notes-container__edit-btn {
+    margin-right: 1rem;
+}

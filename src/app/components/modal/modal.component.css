@@ -1,0 +1,62 @@
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #2525259c;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.modal {
+    position: relative;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 50rem;
+    height: 28.9rem;
+    background-color: var(--color-white);
+    border-radius: 1.6rem;
+    padding-bottom: 0.8rem;
+}
+
+.modal__title {
+    padding-top: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.modal__form {
+    padding: 0 3rem;
+}
+
+.modal__input {
+    width: 41rem;
+    margin-bottom: 12.8rem;
+}
+
+.modal__btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 11rem;
+    height: 3.8rem;
+    font-family: 'Kanit', 'KanitCyrillic', sans-serif;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal__cancel-btn {
+    color: var(--color-blue);
+    background-color: transparent;
+    border: 1px solid var(--color-blue);
+}
+
+.modal__apply-btn {
+    border: none;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Kanit';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../public/assets/fonts/Kanit-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'KanitCyrillic';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../public/assets/fonts/KanitCyrillic.otf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../public/assets/fonts/Inter-VariableFont_opsz,wght.ttf');
+}
