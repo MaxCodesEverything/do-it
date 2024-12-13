@@ -18,11 +18,15 @@ export class CRUDService {
   }
 
   addTask(form: NgForm){
-    this.notesList.push({taskName: form.controls['task'].value, isCompleted: 'false'})
+    this.notesList.push({taskName: form.controls['task'].value, isCompleted: false})
     this.modalSwitch()
   }
 
   deleteTask(index: number){
     this.notesList.splice(index, 1)
+  }
+
+  taskComplete(index: number){
+    this.notesList[index].isCompleted = !this.notesList[index].isCompleted
   }
 }

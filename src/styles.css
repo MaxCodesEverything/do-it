@@ -41,3 +41,8 @@ body {
 .input::placeholder {
     color: #C3C1E5;
 }
+
+.complete {
+    text-decoration: line-through;
+    color: #25252575;
+}
