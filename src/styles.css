@@ -51,3 +51,13 @@ body {
     visibility: hidden;
     opacity: 0;
 }
+
+.inputError {
+    border: 1px solid red;
+    transition: 0.3s ease;
+}
+
+.inputError::placeholder {
+    color: red;
+    transition: 0.3s ease;
+}

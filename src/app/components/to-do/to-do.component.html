@@ -26,9 +26,9 @@
         @if(crudService.notesList.length > 0){
             <div class="notes-container">
                 @for(note of crudService.notesList; track $index){
-                    <div class="notes-container__note">
+                    <form class="notes-container__note">
                         <div class="notes-container__left-wrapper">
-                            <input type="checkbox" class="notes-container__checkbox" (click)="crudService.taskComplete($index)">
+                            <input [checked]="note.isCompleted" type="checkbox" class="notes-container__checkbox" (click)="crudService.taskComplete($index)">
                             <p class="notes-container__text title" [ngClass]="note.isCompleted ? 'complete' : ''">{{note.taskName}}</p>
                         </div>
                         <div class="notes-container__right-wrapper">
@@ -47,7 +47,7 @@
                                 </svg>  
                             </button>                              
                         </div>
-                    </div>
+                    </form>
                 }
             </div>
         } @else {

@@ -5,9 +5,10 @@ import { NgForm } from '@angular/forms';
   providedIn: 'root'
 })
 export class CRUDService {
-  isModalActive: boolean = false;
-
-  notesList: {taskName: string, isCompleted: boolean}[]= [];
+  task: string = ''
+  isModalActive: boolean = false
+  isInputEmpty: boolean = false
+  notesList: {taskName: string, isCompleted: boolean}[]= []
 
   modalSwitch(){
     this.isModalActive = !this.isModalActive
@@ -15,19 +16,29 @@ export class CRUDService {
 
   onCancel(){
     this.modalSwitch()
+    this.isInputEmpty = false
   }
 
   addTask(form: NgForm){
-    this.modalSwitch()
-    this.notesList.push({taskName: form.controls['task'].value, isCompleted: false})
-    form.controls['task'].setValue('')
+    if(form.controls['task'].value.trim() !== ''){
+      this.isInputEmpty = false
+      this.modalSwitch()
+      this.notesList.push({taskName: form.controls['task'].value, isCompleted: false})
+      form.controls['task'].setValue('')
+      localStorage.setItem('tasks', JSON.stringify(this.notesList))
+    }
+    else {
+      this.isInputEmpty = true
+    }
   }
 
   deleteTask(index: number){
     this.notesList.splice(index, 1)
+    localStorage.setItem('tasks', JSON.stringify(this.notesList))
   }
 
   taskComplete(index: number){
     this.notesList[index].isCompleted = !this.notesList[index].isCompleted
+    localStorage.setItem('tasks', JSON.stringify(this.notesList))
   }
 }

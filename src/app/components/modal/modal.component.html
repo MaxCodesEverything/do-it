@@ -2,7 +2,7 @@
     <div class="modal">
         <h2 class="modal__title title">NEW NOTE</h2>
         <form class="modal__form" #modalForm="ngForm" (ngSubmit)="crudService.addTask(modalForm)">
-            <input type="text" ngModel name="task" class="modal__input input" placeholder="Input your note...">
+            <input type="text" ngModel name="task" [class]="crudService.isInputEmpty ? 'inputError' : ''" class="modal__input input" placeholder="Input your note...">
             <div class="modal__btn-box">
                 <button type="button" class="modal__cancel-btn btn" (click)="crudService.onCancel()">CANCEL</button>
                 <button type="submit" class="modal__apply-btn btn">APPLY</button>
