@@ -46,3 +46,8 @@ body {
     text-decoration: line-through;
     color: #25252575;
 }
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

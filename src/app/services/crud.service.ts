@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
 export class CRUDService {
   isModalActive: boolean = false;
 
-  notesList: {taskName: any, isCompleted: any}[]= [];
+  notesList: {taskName: string, isCompleted: boolean}[]= [];
 
   modalSwitch(){
     this.isModalActive = !this.isModalActive
@@ -18,8 +18,9 @@ export class CRUDService {
   }
 
   addTask(form: NgForm){
-    this.notesList.push({taskName: form.controls['task'].value, isCompleted: false})
     this.modalSwitch()
+    this.notesList.push({taskName: form.controls['task'].value, isCompleted: false})
+    form.controls['task'].setValue('')
   }
 
   deleteTask(index: number){
