@@ -9,6 +9,9 @@ export class CRUDService {
   isModalActive: boolean = false
   isInputEmpty: boolean = false
   notesList: {taskName: string, isCompleted: boolean}[]= []
+  filteredNotes: {taskName: string, isCompleted: boolean}[] = []
+  filterText: string = ''
+  filterByCompletion: boolean | null = null
 
   modalSwitch(){
     this.isModalActive = !this.isModalActive

@@ -3,6 +3,7 @@ import { ModalComponent } from "../modal/modal.component";
 import { CRUDService } from '../../services/crud.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FiltrationService } from '../../services/filtration.service';
 
 @Component({
   selector: 'app-to-do',
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ToDoComponent {
   crudService = inject(CRUDService);
+  filtrationService = inject(FiltrationService);
 
   ngOnInit(){
     const storedTasks = localStorage.getItem('tasks')
