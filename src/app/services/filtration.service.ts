@@ -8,14 +8,12 @@ export class FiltrationService {
   crudService = inject(CRUDService);
   selectMenueValue: boolean | null = null;
   filteredNotes: any[] = [];
+  filteredNotesBySearch: any[] = [];
+  filterText: string = '';
+  searchInputValue: string = '';
 
   filterNotesByStatus(){
     switch(this.selectMenueValue){
-        // case null:
-        //     this.crudService.notesList.forEach(note => {
-        //       return note.taskName; 
-        //     });
-        //     break;
         case true:
             this.filteredNotes = this.crudService.notesList.filter(note => {
                 return note.isCompleted == true
@@ -31,7 +29,7 @@ export class FiltrationService {
     }
     
     console.log(this.filteredNotes);
-}
+  }
 
   onSelect(event: Event){
     const selectElement = event.target as HTMLSelectElement;
@@ -52,16 +50,23 @@ export class FiltrationService {
     this.filterNotesByStatus();
   }
   
+  filterNotesByText(){
+    this.filteredNotes = this.crudService.notesList.filter(note => {
+      return note.taskName.toLowerCase().includes(this.filterText.toLowerCase());
+    })
+
+    this.filteredNotes.forEach(note => {
+        console.log(note.taskName);
+    })
 }
 
-// makeItNull(){
-//   this.selectMenueValue = null;
-// }
-
-// makeItTrue(){
-//   this.selectMenueValue = true;
-// }
-
-// makeItFalse(){
-//   this.selectMenueValue = false;
-// }
+  onSearch(){
+    if(this.searchInputValue != ''){
+      this.filterText = this.searchInputValue;
+      this.filterNotesByText();
+    }
+    else{
+      this.filterText = '';
+    }
+  }
+}
