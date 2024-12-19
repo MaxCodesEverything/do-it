@@ -27,8 +27,7 @@ export class FiltrationService {
             this.filteredNotes.forEach(note => {return note.taskName});
             break;
     }
-    
-    console.log(this.filteredNotes);
+    this.searchInputValue = '';
   }
 
   onSelect(event: Event){
@@ -55,9 +54,21 @@ export class FiltrationService {
       return note.taskName.toLowerCase().includes(this.filterText.toLowerCase());
     })
 
-    this.filteredNotes.forEach(note => {
-        console.log(note.taskName);
-    })
+    switch(this.selectMenueValue){
+      case true:
+          this.filteredNotes = this.filteredNotes.filter(note => {
+              return note.isCompleted == true
+          });
+          this.filteredNotes.forEach(note => {return note.taskName});
+          break;
+      case false:
+          this.filteredNotes = this.filteredNotes.filter(note => {
+              return note.isCompleted == false
+          });
+          this.filteredNotes.forEach(note => {return note.taskName});
+          break;
+  }
+  this.searchInputValue = '';
 }
 
   onSearch(){

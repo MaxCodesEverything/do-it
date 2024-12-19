@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FiltrationService } from './filtration.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,6 @@ export class CRUDService {
   notesList: {taskName: string, isCompleted: boolean}[]= []
   filteredNotes: {taskName: string, isCompleted: boolean}[] = []
   filterText: string = ''
-  filterByCompletion: boolean | null = null
 
   modalSwitch(){
     this.isModalActive = !this.isModalActive
