@@ -218,6 +218,10 @@ body {
         width: 85%;
     }
 
+    .main-container__search-btn {
+        right: 2.5%;
+    }
+
     .notes-container{
         max-width: 30rem;
     }
@@ -247,6 +251,16 @@ body {
     }
 
     .main-container__search-btn {
-        right: 0;
+        right: 5%;
+    }
+}
+
+@media(max-width: 382px){
+    .main-container__search-input {
+        width: 81%;
+    }
+
+    .main-container__search-btn {
+        right: 2.5%;
     }
 }

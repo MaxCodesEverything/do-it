@@ -62,6 +62,34 @@ body {
     transition: 0.3s ease;
 }
 
+@media(prefers-color-scheme: dark){
+    :root {
+        --color-white: #252525;
+        --color-black: #F7F7F7;
+    }
+    
+    .title {
+        color: var(--color-black);
+    }
+
+    .main-section__filter-btn {
+        color: var(--color-black) !important;
+    }
+
+    .input {
+        color: var(--color-black);
+        border: 1px solid var(--color-black)
+    }
+
+    .main-section__add-btn {
+        color: var(--color-black) !important;
+    }
+
+    .modal {
+        border: 1px solid var(--color-black);
+    }
+}
+
 @media(max-width: 780px){
     html {
         font-size: 9px;
