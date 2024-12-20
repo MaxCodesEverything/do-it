@@ -199,6 +199,8 @@ body {
     .main-container__search-input {
         width: 92%;
     }
+
+    
 }
 
 @media(max-width: 528px){
@@ -234,14 +236,9 @@ body {
         gap: 1rem;
     }
 
-    .main-section__add-btn[_ngcontent-ng-c2014477838] {
+    .main-section__add-btn {
         top: 60vh;
-    }
-
-    .main-container__theme-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        right: -120px;
     }
 }
 
