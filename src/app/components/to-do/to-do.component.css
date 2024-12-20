@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100vh;
+    height: 100%;
 }
 
 .main-container__title {
@@ -48,7 +48,7 @@ body {
 }
 
 .main-section__filter-btn {
-    width: 8.5rem;
+    width: 8.7rem;
     height: 3.8rem;
     background-color: var(--color-blue);
     border: none;
@@ -189,4 +189,64 @@ body {
 .notes-container__delete-btn:hover svg path {
     stroke: #E50000;
     transition: 0.2s ease-in-out;
+}
+
+@media(max-width: 676px){
+    .main-container {
+        padding: 0 5rem;
+    }
+
+    .main-container__search-input {
+        width: 92%;
+    }
+}
+
+@media(max-width: 528px){
+    .notes-container__note {
+        width: 40rem;
+    }
+}
+
+@media(max-width: 520px){
+    .main-container__search-input {
+        width: 89%;
+    }
+}
+
+@media(max-width: 430px){
+    .main-container__search-input {
+        width: 85%;
+    }
+
+    .notes-container{
+        max-width: 30rem;
+    }
+
+    .notes-container__note {
+        width: 30rem;
+    }
+
+    .main-container__nav-bar {
+        gap: 1rem;
+    }
+
+    .main-section__add-btn[_ngcontent-ng-c2014477838] {
+        top: 60vh;
+    }
+
+    .main-container__theme-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px){
+    .main-container__search-input {
+        width: 81%;
+    }
+
+    .main-container__search-btn {
+        right: 0;
+    }
 }

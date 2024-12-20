@@ -61,3 +61,9 @@ body {
     color: red;
     transition: 0.3s ease;
 }
+
+@media(max-width: 780px){
+    html {
+        font-size: 9px;
+    }
+}
